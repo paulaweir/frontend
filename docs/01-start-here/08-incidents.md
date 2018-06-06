@@ -59,9 +59,10 @@ may be able to see a large number of suspect stack traces that relate to a probl
 with the app itself that point to a software problem.
 
 Check whether REAL traffic is increasing to the app. As discussed above, Fastly 
-itself will send more requests when apps start to return errors. You can use the
-[Fastly Dashboard](https://manage.fastly.com/) along with the CloudWatch dashboard 
-for the app in question to try to find this out.
+itself will send more requests when apps start to return a non-200 response. You can 
+use the[Fastly Dashboard](https://manage.fastly.com/) along with the CloudWatch dashboard 
+for the app in question to try to find out if you are experiencing more real user 
+traffic vs extra 'synthetic' traffic from Fastly.
 
 Check the number of EC2 instances for the affected apps, and what state they are in. 
 You can see this from the [CloudWatch overview board](https://eu-west-1.console.aws.amazon.com/cloudwatch/home?region=eu-west-1#dashboards:name=xOverview) which has a chart for number of healthy/unhealthy 
