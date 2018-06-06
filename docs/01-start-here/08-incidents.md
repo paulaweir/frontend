@@ -2,9 +2,8 @@
 
 what do when everything breaks
 
-The scope of this document is to define a process for dealing with Frontend incidents (site outages), and
-to prescribe a generic pattern of investigation tools and techniques for finding the cause of issues with
-the Frontend stack.
+The scope of this document is to prescribe a generic pattern of investigation tools and techniques for 
+finding the cause of issues with the Frontend stack.
 
 ## Sources of Truth
 
@@ -33,15 +32,9 @@ up to three people:
 * One person should focus on the technical analysis of the problem
 * One person should shadow and support the analyst
 
-For major incidents you should record a timeline of the incident, noting when you 
-began investigating a problem, and the times when remedial actions are made.
-
 ## Initial reaction
 
-* Disable Continuous deployment in RiffRaff by editing dotcom:all [on this page](https://riffraff.gutools.co.uk/deployment/continuous) and setting the trigger to disabled.
-* Block manual deploys
-* Email Central Production, Dotcom and UserHelp teams to say that we are investigating a potential issue 
-* Send an @all mention in Dotcom chat that you are investigating a problem with the Frontend
+[Follow the P1 checklist for communications and process information](https://docs.google.com/document/d/1sAq378Oqm5NUG2_FJORDSd_Tag6gUUUsZaE9zUsgWHc/edit?usp=sharing)
 
 ## Determine which apps are affected
 
