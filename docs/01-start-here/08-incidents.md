@@ -1,6 +1,6 @@
 # Incident Response & Triage
 
-What do when everything breaks
+What to do when everything breaks
 
 The scope of this document is to prescribe a generic pattern of investigation tools and 
 techniques for finding the cause of issues with the Frontend stack.
