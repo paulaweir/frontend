@@ -16,7 +16,7 @@ You may also want to look at the [Fastly dashboard](https://manage.fastly.com/)
 
 ## Process and roles
 
-Response to a potential site incidents will involve in general the following steps
+Response to potential site incidents will involve in general the following steps
 
 1. Initial reaction
 2. Determine which apps are affected
