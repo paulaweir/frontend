@@ -12,7 +12,7 @@ All of our Frontend metrics, alerts and monitoring are available in two places:
 * [CloudWatch](https://eu-west-1.console.aws.amazon.com/cloudwatch/) for health and performance metrics
 * [Kibana](https://logs.gutools.co.uk/app/kibana) for application logs
 
-You may also want to look at the [Fastly fashboard](https://manage.fastly.com/)
+You may also want to look at the [Fastly dashboard](https://manage.fastly.com/)
 
 ## Process and roles
 
@@ -83,22 +83,22 @@ more requests because your app is not returning 200s), you should scale up.
 If instances are maxing their CPU (as seen in the xApp CloudWatch dashboards) you 
 should scale up.
 
-If you are seeing high latency, no application errors in particular, and new 
-instances are coming up healthy, you should scale up the apps.
+If you are seeing high latency, no application errors in particular, and new instances 
+are coming up healthy, you should scale up.
 
 ### Rolling back
 
-If you are seeing application errors in Kibana that point to a software bug, you 
-should roll back by using Riff-Raff to deploy a previous build.
+If you are seeing application errors in Kibana that point to a software bug, you should 
+roll back by using Riff-Raff to deploy a previous build.
 
 ## Pinpoint an exact cause
 
 * High traffic
-    * cache misses?
-    * major news event?
-    * DDoS?
+    * cache misses? - look at fastly
+    * major news event? - you probably already know about it
+    * DDoS? - look at fastly and the Kibana overview board's source IP chart
 * High latency, same traffic
-    * Downstream or upstream dependency has become slow?
+    * Downstream or upstream dependency has become slow? - check CAPI dashboard
     * Latency regression has been introduced into app?
 
 TODO
