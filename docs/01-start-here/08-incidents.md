@@ -1,9 +1,9 @@
 # Incident Response & Triage
 
-what do when everything breaks
+What do when everything breaks
 
-The scope of this document is to prescribe a generic pattern of investigation tools and techniques for 
-finding the cause of issues with the Frontend stack.
+The scope of this document is to prescribe a generic pattern of investigation tools and 
+techniques for finding the cause of issues with the Frontend stack.
 
 ## Sources of Truth
 
@@ -39,8 +39,8 @@ up to three people:
 ## Determine which apps are affected
 
 You will want to start by determining which Frontend apps are affected. You can 
-see this from the overview boards. Pay attention to the charts for errors by
-app and latency by app.
+see this from the overview boards. Pay close attention to the charts for 'errors by
+app' and 'latency by app' in Kibana.
 
 * [Kibana Overview Board](https://logs.gutools.co.uk/app/kibana#/dashboard/00349ef0-06a1-11e8-a56d-a31118fab969?_g=(refreshInterval%3A(display%3AOff%2Cpause%3A!f%2Cvalue%3A0)%2Ctime%3A(from%3Anow-15m%2Cmode%3Aquick%2Cto%3Anow)))
 * [CloudWatch Overview Board](https://eu-west-1.console.aws.amazon.com/cloudwatch/home?region=eu-west-1#dashboards:name=xOverview)
@@ -56,15 +56,16 @@ of incoming traffic.
 
 Check what _kind_ of errors are contained in the Kibana logs for those apps. You 
 may be able to see a large number of suspect stack traces that relate to a problem
-with the app itself that point to the app simply having bugs.
+with the app itself that point to a software problem.
 
 Check whether REAL traffic is increasing to the app. As discussed above, Fastly 
-itself will send more requests when apps start to return errors. You can check
+itself will send more requests when apps start to return errors. You can use the
+[Fastly Dashboard](https://manage.fastly.com/) along with the CloudWatch dashboard 
+for the app in question to try to find this out.
 
-Check the number of EC2 instances for the affected apps, and if they are healthy. 
-You can see this from the CloudWatch overview board which has a chart for number 
-of healthy/unhealthy instances over time. If there are no healthy instances the
-app may be failing to start.
+Check the number of EC2 instances for the affected apps, and what state they are in. 
+You can see this from the [CloudWatch overview board](https://eu-west-1.console.aws.amazon.com/cloudwatch/home?region=eu-west-1#dashboards:name=xOverview) which has a chart for number of healthy/unhealthy 
+instances over time. If there are no healthy instances the app may be failing to start.
 
 ## Judge whether to scale up, roll back
 
@@ -77,7 +78,7 @@ or downstream dependency is the cause of your problems (in these cases scaling u
 may cause that dependency to come under even more load).
 
 If you are seeing an increase in REAL traffic (i.e. not just due to Fastly making 
-more requests), you should scale up.
+more requests because your app is not returning 200s), you should scale up.
 
 If instances are maxing their CPU (as seen in the xApp CloudWatch dashboards) you 
 should scale up.
@@ -85,7 +86,7 @@ should scale up.
 If you are seeing high latency, no application errors in particular, and new 
 instances are coming up healthy, you should scale up the apps.
 
-### Rolling back
+### Rolling back
 
 If you are seeing application errors in Kibana that point to a software bug, you 
 should roll back by using Riff-Raff to deploy a previous build.
