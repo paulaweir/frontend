@@ -94,13 +94,19 @@ roll back by using Riff-Raff to deploy a previous build.
 
 ## Pinpoint an exact cause
 
-* High traffic
-    * cache misses? - look at fastly
-    * major news event? - you probably already know about it
-    * DDoS? - look at fastly and the Kibana overview board's source IP chart
-* High latency, same traffic
-    * Downstream or upstream dependency has become slow? - check CAPI dashboard
-    * Latency regression has been introduced into app?
+### For traffic related issues
+
+If you are experiencing high user traffic in general, this may be due to an increased
+number of cache misses on fastly. You can see the cache hit rate on the [Fastly dashboard](https://manage.fastly.com/)
+
+You might be experiening a single user flooding the app with thousands of requests. You
+can drill into the source-api chart on the [Kibana Overview Board](https://logs.gutools.co.uk/app/kibana#/dashboard/00349ef0-06a1-11e8-a56d-a31118fab969?_g=(refreshInterval%3A(display%3AOff%2Cpause%3A!f%2Cvalue%3A0)%2Ctime%3A(from%3Anow-15m%2Cmode%3Aquick%2Cto%3Anow)))
+to see if this is the case.
+
+### For High Latency without high traffic
+
+If your apps are mysteriously slowing down, this could be due to an upstream/downstream
+dependency, such as CAPI, becomming slow. You can see the CAPI team dashboard [here](http://fixme.com)
 
 TODO
 
