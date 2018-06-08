@@ -112,6 +112,21 @@ incorporates our own latency into the measure, in other words if we are slow tal
 CAPI, then it will be reported as 'CAPI being slow' even though the latency is within our own 
 app.
 
+### Analysing Instances Directly
+
+If you suspect that there is a real issue with an app you can connect directly to the instance
+using to try and collect more runtime information. 
+
+You should start by picking an instance and detaching it from the load balancer so that it doesn't
+get killed or interfered with, and then connect to via ssm. 
+
+You should look for things like:
+
+* The application logs
+* Running ```top``` to get memory and cpu usage
+* Check diskspace with ```df -h```
+* Get the number of open file descriptors with ```lsof | wc -l```
+
 ## Cleaning up after the incident is over
 
 [Keep following the P1 checklist for communications and process information after the incident is resolved](https://docs.google.com/document/d/1sAq378Oqm5NUG2_FJORDSd_Tag6gUUUsZaE9zUsgWHc/edit?usp=sharing)
