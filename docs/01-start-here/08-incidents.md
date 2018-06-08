@@ -60,7 +60,7 @@ with the app itself that point to a software problem.
 
 Check whether REAL traffic is increasing to the app. As discussed above, Fastly 
 itself will send more requests when apps start to return a non-200 response. You can 
-use the[Fastly Dashboard](https://manage.fastly.com/) along with the CloudWatch dashboard 
+use the [Fastly Dashboard](https://manage.fastly.com/) along with the CloudWatch dashboard 
 for the app in question to try to find out if you are experiencing more real user 
 traffic vs extra 'synthetic' traffic from Fastly.
 
