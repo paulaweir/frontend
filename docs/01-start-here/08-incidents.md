@@ -2,7 +2,7 @@
 
 What to do when everything breaks
 
-The scope of this document is to prescribe a generic pattern of investigation tools and 
+The scope of this document is to prescribe a generic pattern of investigation, tools and 
 techniques for finding the cause of issues with the Frontend stack.
 
 ## Sources of Truth
@@ -12,7 +12,7 @@ All of our Frontend metrics, alerts and monitoring are available in two places:
 * [CloudWatch](https://eu-west-1.console.aws.amazon.com/cloudwatch/) for health and performance metrics
 * [Kibana](https://logs.gutools.co.uk/app/kibana) for application logs
 
-You may also want to look at the [Fastly dashboard](https://manage.fastly.com/)
+You may also want to look at the [Fastly dashboard](https://manage.fastly.com/) and the  [CAPI Dashboard](http://status.capi.gutools.co.uk/)
 
 ## Process and roles
 
@@ -23,12 +23,12 @@ Response to potential site incidents will involve in general the following steps
 3. Investigate whether the affected apps are _slow_ or _failing_
 4. Judge whether to scale up, roll back
 5. Pinpoint an exact cause
-6. Deploying a fix
+6. Cleaning up after the incident is over
 
 Depending on the severity of the incident you should have a response team of
 up to three people:
 
-* One person should focus on communication with other parties and initial response
+* One person should focus on communication with other parties and handle initial response
 * One person should focus on the technical analysis of the problem
 * One person should shadow and support the analyst
 
@@ -89,8 +89,8 @@ are coming up healthy, you should scale up.
 
 ### Rolling back
 
-If you are seeing application errors in Kibana that point to a software bug, you should 
-roll back by using Riff-Raff to deploy a previous build.
+If you are seeing application errors in Kibana that point to a software bug, you 
+should roll back by using Riff-Raff to deploy a previous build.
 
 ## Pinpoint an exact cause
 
@@ -99,18 +99,28 @@ roll back by using Riff-Raff to deploy a previous build.
 If you are experiencing high user traffic in general, this may be due to an increased
 number of cache misses on fastly. You can see the cache hit rate on the [Fastly dashboard](https://manage.fastly.com/)
 
-You might be experiening a single user flooding the app with thousands of requests. You
-can drill into the source-api chart on the [Kibana Overview Board](https://logs.gutools.co.uk/app/kibana#/dashboard/00349ef0-06a1-11e8-a56d-a31118fab969?_g=(refreshInterval%3A(display%3AOff%2Cpause%3A!f%2Cvalue%3A0)%2Ctime%3A(from%3Anow-15m%2Cmode%3Aquick%2Cto%3Anow)))
+You might be experiening a single user flooding the app with thousands of requests. 
+You can drill into the source-api chart on the [Kibana Overview Board](https://logs.gutools.co.uk/app/kibana#/dashboard/00349ef0-06a1-11e8-a56d-a31118fab969?_g=(refreshInterval%3A(display%3AOff%2Cpause%3A!f%2Cvalue%3A0)%2Ctime%3A(from%3Anow-15m%2Cmode%3Aquick%2Cto%3Anow)))
 to see if this is the case.
 
 ### For High Latency without high traffic
 
 If your apps are mysteriously slowing down, this could be due to an upstream/downstream
-dependency, such as CAPI, becomming slow. You can see the CAPI team dashboard [here](http://fixme.com)
+dependency, such as CAPI, becomming slow. You can see the CAPI team dashboard [here](http://status.capi.gutools.co.uk/).
+Our own Kibana dashboards _also_ show CAPI latency, but it can be misleading as it 
+incorporates our own latency into the measure, in other words if we are slow talking to 
+CAPI, then it will be reported as 'CAPI being slow' even though the latency is within our own 
+app.
 
-TODO
+## Cleaning up after the incident is over
 
-## Deploying a fix
+[Keep following the P1 checklist for communications and process information after the incident is resolved](https://docs.google.com/document/d/1sAq378Oqm5NUG2_FJORDSd_Tag6gUUUsZaE9zUsgWHc/edit?usp=sharing)
 
-TODO
+If you scaled frontend apps up, you should wait for latency and error rates have returned to normal
+before scaling back down again.
+
+If you rolled back because of a software defect, merge the fix into master, test it on CODE and then
+deploy to production.
+
+At this point you can unblock deploys and re-enable CI.
 
