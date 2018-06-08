@@ -139,3 +139,12 @@ deploy to production.
 
 At this point you can unblock deploys and re-enable CI.
 
+# Appendix
+
+## How to scale services up/down
+
+On the AWS console for frontend, go to EC2 > Auto Scaling Groups > search for the app + prod
+
+Double the number of desired instances in the scaling group configuration. Note that no riff-raff deploys
+will work at this point because a riff-raff deploy would double the desired instances again, exceeding 
+the number of max instances and fail, but you will have blocked deploys anyway.
