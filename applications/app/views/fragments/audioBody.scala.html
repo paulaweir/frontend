@@ -37,7 +37,12 @@
                         @media match {
                             case audio: Audio => {
 
-                                <figure data-component="main audio">
+                                <figure data-component="main audio"
+                                    id="audio-component-container"
+                                    @*data-duration="@Html(@audio.duration.toString())"*@
+                                    data-duration="2:00:00"
+                                    data-source="@Html(@audio.metadata.url)"
+                                    data-media-id="@Html(@audio.properties.id)">
                                     <p>THE NEW AUDIO COMPONENT WILL GO IN HERE</p>
                                 </figure>
                             }
