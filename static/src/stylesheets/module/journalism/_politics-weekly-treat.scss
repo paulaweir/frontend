@@ -50,7 +50,7 @@
 .politics-weekly-treat__podcast {
     background: $news-garnett-highlight;
 
-    color: $garnett-neutral-1;
+    color: $black;
     font-size: 14px;
     font-family: $f-serif-headline;
     line-height: 1.5;
@@ -82,7 +82,7 @@
     }
 }
 .politics-weekly-treat__podcast-title span {
-    background: $garnett-neutral-1;
+    background: $black;
 
     @include mq(leftCol) {
         padding: 2px 3px 5px;
@@ -98,7 +98,7 @@
 .politics-weekly-treat__player {
     background: #e9eff1;
     font-size: 13px;
-    color: $garnett-neutral-1;
+    color: $black;
 
     @include mq(leftCol) {
         padding: 1px 4px 0px 1px;
@@ -144,7 +144,7 @@
     font-size: 13px;
     font-family: $f-sans-serif-text;
     line-height: 16px;
-    color: $garnett-neutral-1;
+    color: $black;
     max-width: 170px;
     padding-left: 2px;
 

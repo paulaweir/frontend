@@ -129,7 +129,7 @@ $header-image-size-desktop: 100px;
     position: relative;
     padding-bottom: $gs-baseline/3;
     line-height: get-line-height(header, 2);
-    color: $garnett-neutral-1;
+    color: $black;
 
     @include mq(leftCol, wide) {
         @include font-size(20px, 24px);
@@ -531,7 +531,7 @@ $header-image-size-desktop: 100px;
 
     &:hover,
     &:focus {
-        color: $neutral-1;
+        color: $black;
     }
 
     [data-component='headlines'] & {
@@ -572,7 +572,7 @@ $header-image-size-desktop: 100px;
 
 .fc-date-headline {
     @include fs-headline(2);
-    color: $neutral-1;
+    color: $black;
     display: block;
     padding-bottom: $gs-baseline / 2;
 }
@@ -620,7 +620,7 @@ $header-image-size-desktop: 100px;
 
     &,
     a {
-        color: $garnett-neutral-1;
+        color: $black;
     }
 
     @include fs-header(4);
