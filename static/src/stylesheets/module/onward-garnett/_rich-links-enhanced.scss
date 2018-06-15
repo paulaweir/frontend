@@ -41,7 +41,7 @@
 }
 
 .rich-link .u-faux-block-link--hover {
-    background-color: $neutral-6;
+    background-color: $brightness-93;
 
     .rich-link__image-container {
         background-color: #000000;
@@ -80,7 +80,7 @@
 }
 
 .rich-link__title .inline-quote {
-    fill: $neutral-2;
+    fill: $brightness-46;
     svg {
         height: 14px;
         width: 23px;
@@ -150,7 +150,7 @@
 }
 .rich-link__branding {
     @include fs-textSans(1);
-    color: $neutral-2;
+    color: $brightness-46;
     font-weight: bold;
     margin: -$gs-baseline / 2 $gs-gutter / 4 $gs-baseline;
 }

@@ -41,7 +41,7 @@
         margin: 0 0 $gs-baseline * 2;
 
         &:not(.quoted) {
-            background-color: $neutral-6;
+            background-color: $brightness-93;
             padding: $gs-baseline / 1.5  $gs-baseline $gs-baseline;
         }
 
@@ -170,7 +170,7 @@
 
         //important because it is important elsewhere
         .pullquote-cite {
-            color: $neutral-2 !important;
+            color: $brightness-46 !important;
             font-size: 26px;
         }
 

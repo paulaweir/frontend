@@ -1,7 +1,7 @@
 .tone-news--item {
     &.fc-item,
     &.rich-link {
-        background-color: $neutral-8;
+        background-color: $brightness-97;
     }
 
     .rich-link__container:before,
@@ -16,11 +16,11 @@
     }
 
     .fc-item__kicker--dreamsnap {
-        background-color: mix(#000000, $neutral-8, 10%);
+        background-color: mix(#000000, $brightness-97, 10%);
     }
 
     .fc-item__kicker--breaking-news {
-        color: $live-default;
+        color: $news-dark;
     }
 
     .rich-link__arrow-icon {

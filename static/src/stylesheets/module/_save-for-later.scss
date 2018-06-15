@@ -36,11 +36,11 @@ $sfl-button-height: 30px;
 // media tone
 .tonal--tone-media {
     .save-for-later__button {
-        color: $neutral-4;
+        color: $brightness-86;
 
         .inline-icon {
-            border-color: $neutral-2;
-            fill: $neutral-4;
+            border-color: $brightness-46;
+            fill: $brightness-86;
         }
     }
 
@@ -49,8 +49,8 @@ $sfl-button-height: 30px;
     .save-for-later__button--save:focus {
         .inline-icon {
             fill: $multimedia-support-5;
-            border-color: $neutral-4;
-            background-color: $neutral-4;
+            border-color: $brightness-86;
+            background-color: $brightness-86;
         }
     }
 }

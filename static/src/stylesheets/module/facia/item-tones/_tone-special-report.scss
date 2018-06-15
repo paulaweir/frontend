@@ -10,7 +10,7 @@
     }
 
     .inline-quote {
-        fill: $neutral-4;
+        fill: $brightness-86;
     }
 
     .rich-link__container:before,
@@ -44,7 +44,7 @@
     }
 
     .fc-item__kicker--breaking-news {
-        color: lighten($live-default, 35%);
+        color: lighten($news-dark, 35%);
     }
 
     .fc-item__standfirst {
@@ -66,7 +66,7 @@
     }
 
     .fc-item__meta {
-        color: $neutral-4;
+        color: $brightness-86;
     }
 }
 

@@ -53,7 +53,7 @@ $quote-mark: 35px;
     }
 
     .content__meta-container {
-        @include multiline(4, $garnett-neutral-4, top);
+        @include multiline(4, $brightness-86, top);
         // creates correct top spacing for multiline bg image
         padding-top: 15px;
         margin-bottom: $gs-baseline / 2;
@@ -194,10 +194,10 @@ $quote-mark: 35px;
         }
 
         a {
-            color: $garnett-neutral-6;
+            color: $brightness-46;
 
             .inline-icon {
-                fill: $garnett-neutral-6;
+                fill: $brightness-46;
             }
 
             &:focus,
@@ -210,7 +210,7 @@ $quote-mark: 35px;
         }
 
         .contact {
-            color: $garnett-neutral-6;
+            color: $brightness-46;
             display: inline-block!important;
         }
     }
@@ -222,18 +222,18 @@ $quote-mark: 35px;
     .block-share__item,
     .social-icon {
         background-color: transparent;
-        border: 1px solid $neutral-4;
+        border: 1px solid $brightness-86;
 
         &:focus,
         &:hover {
             svg {
-                fill: $garnett-neutral-5;
+                fill: $white;
             }
         }
     }
 
     .meta__number + .meta__number {
-        border-color: $garnett-neutral-4;
+        border-color: $brightness-86;
     }
     // *************** Header and Body Styles ***************
 
@@ -247,7 +247,7 @@ $quote-mark: 35px;
                 left: 0;
                 height: 100%;
                 width: 1px;
-                background: $garnett-neutral-4;
+                background: $brightness-86;
             }
         }
 
@@ -391,7 +391,7 @@ $quote-mark: 35px;
 
     // *************** Quote Styles ***************
     .element-pullquote {
-        background-color: $garnett-neutral-3;
+        background-color: $brightness-97;
         margin: $gs-gutter/4 0 $gs-baseline*2;
         padding: $gs-baseline/2 $gs-gutter/2 $gs-baseline;
         position: relative;
@@ -417,7 +417,7 @@ $quote-mark: 35px;
             position: absolute;
             bottom: -$quote-tail;
             left: $gs-gutter/2;
-            background-color: $garnett-neutral-3;
+            background-color: $brightness-97;
             @include mq(mobileLandscape) {
                 left: $gs-gutter;
             }
@@ -815,7 +815,7 @@ $quote-mark: 35px;
         padding-bottom: $gs-baseline/2;
 
         .rich-link {
-            background-color: $garnett-neutral-5;
+            background-color: $white;
         }
 
         .rich-link.tone-media--item {
@@ -854,7 +854,7 @@ $quote-mark: 35px;
         margin-bottom: 0;
 
         @include mq(leftCol) {
-            @include multiline(8, $garnett-neutral-4, 8);
+            @include multiline(8, $brightness-86, 8);
             padding-top: $gs-baseline * 3;
             // the multiline pattern is 4px high, so its height for n lines is (n - 1) * 4 + 1
             margin-top: -1 * (7 * 4px + 1);
@@ -889,7 +889,7 @@ $quote-mark: 35px;
     }
 
     .content__header {
-        @include multiline(8, $garnett-neutral-4);
+        @include multiline(8, $brightness-86);
         position: relative;
     }
 
@@ -959,7 +959,7 @@ $quote-mark: 35px;
     }
 
     .content__headline {
-        color: $garnett-neutral-5;
+        color: $white;
         padding-bottom: $gs-baseline*3;
     }
 
@@ -984,17 +984,17 @@ $quote-mark: 35px;
     .meta__numbers .sharecount__value,
     .u-underline,
     a {
-        color: $garnett-neutral-4;
+        color: $brightness-86;
     }
 
     .byline a,
     .from-content-api a {
         text-decoration: none;
-        border-bottom: .1px solid $garnett-neutral-6;
+        border-bottom: .1px solid $brightness-46;
         transition: border-color .15s ease-out;
 
         &:hover {
-            border-color: $garnett-neutral-4;
+            border-color: $brightness-86;
         }
     }
 
@@ -1007,7 +1007,7 @@ $quote-mark: 35px;
     .meta__extras,
     .meta__number:not(.u-h) + .meta__number,
     .meta__numbers {
-        border-color: $garnett-neutral-7;
+        border-color: $brightness-27;
     }
 
     .tonal__standfirst {
@@ -1024,21 +1024,21 @@ $quote-mark: 35px;
     }
 
     .u-underline {
-        border-bottom: solid 1px $garnett-neutral-6;
+        border-bottom: solid 1px $brightness-46;
     }
 
     .bullet:before {
-        background-color: $garnett-neutral-4;
+        background-color: $brightness-86;
     }
 
     .content__meta-container {
-        @include multiline(4, $garnett-neutral-7, top);
+        @include multiline(4, $brightness-27, top);
     }
 
     .inline-icon,
     .meta__numbers .inline-share svg,
     .social-icon__svg {
-        fill: $garnett-neutral-4;
+        fill: $brightness-86;
     }
 
     .byline span {
@@ -1303,7 +1303,7 @@ $quote-mark: 35px;
 // *************** Interactive elements ***************
 .interactive.element--showcase,
 .interactive.element--supporting {
-    background: $garnett-neutral-5;
+    background: $white;
 }
 
 .paid-content {
@@ -1316,16 +1316,16 @@ $quote-mark: 35px;
     }
 
     .content__meta-container {
-        @include multiline(3, $garnett-neutral-6, top);
+        @include multiline(3, $brightness-46, top);
     }
 
     .social-icon,
     .block-share__item {
-        border-color: $garnett-neutral-6;
+        border-color: $brightness-46;
     }
 
     .content__article-body::before {
-        background: $garnett-neutral-6;
+        background: $brightness-46;
     }
 
     .element .caption {

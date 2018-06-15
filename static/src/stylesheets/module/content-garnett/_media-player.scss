@@ -264,7 +264,7 @@ $ima-controls-height: 70px;
 }
 
 .vjs-duration {
-    color: $neutral-3;
+    color: $brightness-86;
 }
 
 .vjs-fullscreen-control {
@@ -368,7 +368,7 @@ $ima-controls-height: 70px;
         content: '';
         left: 0;
         right: 0;
-        background-color: $neutral-7;
+        background-color: $brightness-97;
     }
 }
 
@@ -608,7 +608,7 @@ $ima-controls-height: 70px;
     height: gs-height(1) + $gs-baseline;
     color: $black;
     padding: $gs-baseline/3 $gs-gutter/2 0;
-    border: 1px solid $neutral-3;
+    border: 1px solid $brightness-86;
     outline: none;
 
     &::selection {
@@ -754,7 +754,7 @@ $ima-controls-height: 70px;
         display: none;
     }
     &:hover {
-        color: $comment-main-2;
+        color: $opinion-bright;
 
         .i-play-icon-grey {
             display: none;
@@ -780,7 +780,7 @@ $ima-controls-height: 70px;
     margin: auto;
     box-sizing: border-box;
     background-color: rgba(25, 25, 25, .8);
-    color: $neutral-7;
+    color: $brightness-97;
     top: $gs-baseline*4;
     padding-top: $gs-gutter/4;
     max-width: gs-span(7);
@@ -823,7 +823,7 @@ $ima-controls-height: 70px;
             list-style: none;
 
             &:not(:first-child) {
-                border-left: 1px solid $neutral-2;
+                border-left: 1px solid $brightness-46;
             }
 
             .fc-item__action {
@@ -848,7 +848,7 @@ $ima-controls-height: 70px;
 
         @include mq($until: tablet) {
             top: $gs-baseline*4;
-            border-top: 1px solid $neutral-2;
+            border-top: 1px solid $brightness-46;
         }
 
         @include mq(tablet, desktop) {
@@ -895,7 +895,7 @@ $ima-controls-height: 70px;
             margin-bottom: 0;
 
             &:nth-child(-n+3) {
-                border-right: 1px solid $neutral-2;
+                border-right: 1px solid $brightness-46;
             }
         }
         .item__headline {
@@ -928,7 +928,7 @@ $ima-controls-height: 70px;
 }
 .podcast-meta__item__link {
     @include fs-textSans(1);
-    color: $neutral-7;
+    color: $brightness-97;
 }
 
 /* IMA Adverts
@@ -1026,7 +1026,7 @@ $ima-controls-height: 70px;
     .fc-item__action {
         display: block;
         padding-top: $gs-baseline;
-        color: $neutral-5;
+        color: $brightness-86;
 
         &:hover,
         &:focus {
@@ -1034,7 +1034,7 @@ $ima-controls-height: 70px;
         }
         &:visited,
         &:active {
-            color: darken($neutral-5, 20%);
+            color: darken($brightness-86, 20%);
         }
     }
 

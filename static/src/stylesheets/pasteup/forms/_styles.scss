@@ -24,7 +24,7 @@
 
 .fieldset {
     border: 0;
-    border-top: 1px solid $neutral-7;
+    border-top: 1px solid $brightness-97;
     display: table;
     padding: (($gs-baseline/3)*4 - 1) 0 ($gs-baseline*2);
     margin: 0;
@@ -155,7 +155,7 @@
 
 .text-input,
 .textarea {
-    border: 1px solid $neutral-4;
+    border: 1px solid $brightness-86;
     box-shadow: none;
     box-sizing: border-box;
     color: $black;
@@ -170,7 +170,7 @@
     -webkit-appearance: none;
 
     &:focus {
-        border-color: $neutral-2;
+        border-color: $brightness-46;
     }
 
     @include mq(tablet) {
@@ -222,7 +222,7 @@
 }
 
 .submit-input[disabled] {
-    background: $neutral-5;
+    background: $brightness-86;
 }
 
 .check-label,
@@ -249,15 +249,15 @@
 }
 
 .delete-input-warn {
-    background-color: $live-main-1;
+    background-color: $news-dark;
     &:hover,
     &:focus {
-        background-color: darken($live-main-1, 5%);
+        background-color: darken($news-dark, 5%);
     }
 }
 
 .delete-input-warn[disabled] {
-    background-color: lighten($live-main-1, 5%);
+    background-color: lighten($news-dark, 5%);
     opacity: .6;
     pointer-events: none;
 }

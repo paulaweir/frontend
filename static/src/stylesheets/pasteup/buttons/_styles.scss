@@ -62,12 +62,12 @@
 
 .button--secondary {
     @include button-colour(
-        $neutral-7,
+        $brightness-97,
         $black
     );
 
     @include button-hover-colour(
-        darken($neutral-7, 10%)
+        darken($brightness-97, 10%)
     );
 }
 
@@ -75,19 +75,19 @@
     @include button-colour(
         transparent,
         $black,
-        $neutral-4
+        $brightness-86
     );
 
     @include button-hover-colour(
         transparent,
-        darken($neutral-3, 10%)
+        darken($brightness-86, 10%)
     );
 }
 
 .button--tone-media {
     @include button-colour(
         $media-mute,
-        $neutral-3
+        $brightness-86
     );
 
     @include button-hover-colour(
@@ -98,24 +98,24 @@
 .button--tone-media-variant {
     @include button-colour(
         $media-background,
-        $neutral-3,
-        $neutral-2
+        $brightness-86,
+        $brightness-46
     );
 
     @include button-hover-colour(
         $media-background,
-        $neutral-3
+        $brightness-86
     );
 }
 
 .button--tone-news {
     @include button-colour(
-        $neutral-7,
+        $brightness-97,
         $news-main-1
     );
 
     @include button-hover-colour(
-        darken($neutral-7, 10%)
+        darken($brightness-97, 10%)
     );
 }
 
@@ -123,84 +123,84 @@
     @include button-colour(
         #ffffff,
         $news-main-1,
-        $neutral-4
+        $brightness-86
     );
 
     @include button-hover-colour(
         #ffffff,
-        darken($neutral-3, 10%)
+        darken($brightness-86, 10%)
     );
 }
 
 .button--tone-feature {
     @include button-colour(
-        $neutral-7,
-        $features-support-1
+        $brightness-97,
+        $lifestyle-dark
     );
 
     @include button-hover-colour(
-        darken($neutral-7, 10%)
+        darken($brightness-97, 10%)
     );
 }
 
 .button--tone-feature-variant {
     @include button-colour(
         #ffffff,
-        $features-support-1,
-        $neutral-4
+        $lifestyle-dark,
+        $brightness-86
     );
 
     @include button-hover-colour(
         #ffffff,
-        darken($neutral-3, 10%)
+        darken($brightness-86, 10%)
     );
 }
 
 .button--tone-comment {
     @include button-colour(
-        $neutral-7,
-        $comment-main-1
+        $brightness-97,
+        $opinion-dark
     );
 
     @include button-hover-colour(
-        darken($neutral-7, 10%)
+        darken($brightness-97, 10%)
     );
 }
 
 .button--tone-comment-variant {
     @include button-colour(
         #ffffff,
-        $comment-main-1,
-        $neutral-4
+        $opinion-dark,
+        $brightness-86
     );
 
     @include button-hover-colour(
         #ffffff,
-        darken($neutral-3, 10%)
+        darken($brightness-86, 10%)
     );
 }
 
 .button--tone-live {
     @include button-colour(
-        $neutral-6,
+        $brightness-93,
         $black
     );
 
     @include button-hover-colour(
-        darken($neutral-6, 10%)
+        darken($brightness-93, 10%)
     );
 }
 
 .button--tone-live-variant {
     @include button-colour(
-        $neutral-8,
+        $brightness-97,
         $black,
-        $neutral-3
+        $brightness-86
     );
 
     @include button-hover-colour(
-        $neutral-8,
-        darken($neutral-3, 10%)
+        $brightness-97,
+        darken($brightness-86, 10%)
     );
 }
 
