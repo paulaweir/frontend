@@ -67,7 +67,7 @@
 }
 
 .content--pillar-news {
-    @include PillarColourTwo($news-garnett-main-1, $news-garnett-feature);
+    @include PillarColourTwo($news-bold, $news-dark);
 }
 
 .content--pillar-opinion {
@@ -93,11 +93,11 @@
     background-color: #eff1f2;
 
     .content__series-label__link {
-        background-color: $news-garnett-highlight;
+        background-color: $yellow-highlight;
         padding: ($gs-baseline / 4) ($gs-gutter / 4);
     }
 
     .content__meta-container .byline-img {
-        background-color: $news-garnett-highlight;
+        background-color: $yellow-highlight;
     }
 }
