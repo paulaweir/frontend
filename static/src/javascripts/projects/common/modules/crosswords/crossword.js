@@ -372,7 +372,7 @@ class Crossword extends Component<*, CrosswordState> {
 
     insertCharacter(character: string): void {
         const cell = this.state.cellInFocus;
-        if (/[A-Z]/.test(character) && character.length === 1 && cell) {
+        if (/[A-Za-zÀ-ÿ]/.test(character) && character.length === 1 && cell) {
             this.setCellValue(cell.x, cell.y, character);
             this.save();
             this.focusNext();
